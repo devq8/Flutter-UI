@@ -16,16 +16,35 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: Scaffold(
-          backgroundColor: Colors.amber,
-          body: Center(
-            child: Text(
-              "Khaled Alghanim",
-              style: TextStyle(
-                fontSize: 40,
-                color: Colors.lightBlue,
-                fontWeight: FontWeight.bold,
+          backgroundColor: Colors.lightBlue,
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                child: ClipRRect(
+                  child: Image.asset('assets/images/coffee.png'),
+                ),
               ),
-            ),
+              Row(
+                children: [
+                  Container(
+                      color: Colors.lightGreen,
+                      margin: EdgeInsets.only(top: 20, left: 20),
+                      child: Text("Name")),
+                  Container(
+                    color: Colors.yellowAccent,
+                    margin: EdgeInsets.only(left: 20),
+                    child: Text("Age"),
+                  ),
+                  Container(
+                    color: Colors.orange,
+                    margin: EdgeInsets.only(left: 20),
+                    child: Text("Gender"),
+                  ),
+                ],
+              )
+            ],
           ),
         ));
   }
