@@ -22,10 +22,16 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                child: ClipRRect(
-                  child: Image.asset('assets/images/coffee.png'),
+                decoration: BoxDecoration(shape: BoxShape.circle),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  'assets/images/coffee.png',
                 ),
               ),
+              // CircleAvatar(
+              //   foregroundImage: AssetImage('assets/images/coffee.png'),
+              //   radius: 100,
+              // ),
               Row(
                 children: [
                   Container(
